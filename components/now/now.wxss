@@ -1,0 +1,92 @@
+/* components/header/header.wxss */
+.button-container{
+  position: fixed;
+  top:20rpx;
+  left: 20rpx;
+  z-index: 999;
+}
+.category-item{
+  display: block;
+  margin-top: 10rpx;
+  padding: 5rpx 0;
+  width: 120rpx;
+  color: white;
+  font-size: 22rpx;
+  text-align: center;
+  background-color: rgba(216, 84, 23, 0.9);
+  border-radius: 5rpx;
+}
+.my-button{
+  padding: 0 !important;
+  width: 120rpx !important;
+  height: 40rpx;
+  font-size: 24rpx;
+  background-color: rgba(216, 84, 23, 0.9);
+  border-radius: 5rpx;
+  color: white;
+  outline: none;
+}
+.button-category{
+  height: 340rpx;
+  overflow: scroll;
+}
+.button-category::-webkit-scrollbar{
+  display: none;
+}
+/*实时天气*/
+.weather-img{
+  width: 80rpx;
+}
+.weather-now{
+  position: relative;
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 24rpx;
+}
+.now-base{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nick-name-box{
+  position: absolute;
+  top:0;
+  right: 10%;
+  overflow: hidden;
+}
+.now-base .avatar{
+  margin: 0 auto;
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.nick-name{
+  display: inline-block;
+  padding: 16rpx;
+  max-width:100rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 20rpx;
+}
+.weather-now .temp{
+  display: block;
+  padding-top: 30rpx;
+  width: 100%;
+  font-size: 180rpx;
+  font-weight: 200;
+  text-align: center;
+}
+.weather-now .currentCity{
+  display: block;
+  position: absolute;
+  top:0;
+  right: 50%;
+  font-size: 50rpx;
+  font-weight: bolder;
+  transform: translate(50%,0);
+}
+.weather-now .weather{
+  display: inline-block;
+  margin: 10rpx;
+}
