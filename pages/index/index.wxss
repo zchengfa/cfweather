@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   color: white;
   background-size: cover;
+  -webkit-overflow-scrolling: touch;
 }
 image{
   width: 40rpx;

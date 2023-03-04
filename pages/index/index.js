@@ -493,12 +493,15 @@ Page({
     wx.showModal({
       title:'提示',
       content:'是否允许小程序获取您的头像和昵称？',
-      cancelColor: '拒绝',
+      cancelColor:'#FF002F',
+      cancelText:'不允许',
+      confirmText:'允许',
       success(res){
         res.confirm?(()=>{
           wx.getUserProfile({
             desc: '用于完善用户资料',
             success(res){
+              console.log(res)
               let info = {
                 avatar:res.userInfo.avatarUrl,
                 nickName:res.userInfo.nickName

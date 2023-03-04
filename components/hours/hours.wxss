@@ -23,7 +23,7 @@
   color: red;
 }
 .weather-text{
-  color: rgb(255, 0, 234);
+  color: rgb(255, 0, 47);
 }
 .img{
   width: 40rpx;

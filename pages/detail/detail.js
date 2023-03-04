@@ -8,8 +8,8 @@ Page({
     //指数详情数据
     detailData:[],
     //新闻数据
-    news:[],
-    
+    news:{},
+    count:1,
   },
 
   /**
@@ -36,7 +36,7 @@ Page({
   onReady: function () {
     var that =this;
     wx.request({
-      url: 'http://v.juhe.cn/toutiao/index?key=73719e316b5050bcd0a32ad3f5fc80ce',
+      url: 'https://v.juhe.cn/toutiao/index?key=73719e316b5050bcd0a32ad3f5fc80ce',
       success(res){
         console.log(res.data.result);
         that.setData({
@@ -79,7 +79,7 @@ Page({
    */
   onReachBottom: function () {
     //上拉加载更多新闻数据
-    this.data.count+=20;
+    this.data.count+=1;
    
     var that = this;
     //显示加载组件
@@ -87,14 +87,17 @@ Page({
       title: '加载中',
     })
     wx.request({
-      url: 'https://api.apiopen.top/getWangYiNews',
+      url: 'https://v.juhe.cn/toutiao/index?key=73719e316b5050bcd0a32ad3f5fc80ce',
       data:{
-        count:that.data.count
+        page:that.data.count
       },
       success(res){
         console.log(res.data.result);
+        let moreNews = res.data.result
+        moreNews.data.unshift(...that.data.news.data)
+       
         that.setData({
-          news:res.data.result
+          news:moreNews
         });
         //隐藏加载组件
         wx.hideLoading({

@@ -55,25 +55,42 @@ text{
 }
 /* 新闻资讯 */
 .news-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15rpx 0;
   border-bottom: 1rpx dotted darkgrey;
 }
-.item{
-  float: left;
+.news-container text{
+  height: 40rpx;
+}
+.item text{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .news-l{
-  width: 30%;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+ 
 }
 .news-l image{
   padding: 10rpx;
-  width: 200rpx;
+  width: 160rpx;
+  border-radius: 42rpx;
 }
 .news-r{
+  padding-left: 10rpx;
   width: 70%;
 }
 .news-r text{
   font-size: 24rpx;
 }
+.news-time{
+  margin-top: 15rpx;
+}
 .news-time text{
   font-size: 22rpx;
-  color: darkgrey;
+  color: rgba(0, 0, 255, 0.425);
 }
